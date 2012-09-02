@@ -86,14 +86,15 @@ static id kNSNO = NULL;
     if ((self = [super init]) != NULL)
         {
         strictEscapeCodes = NO;
-        nullObject = [[NSNull null] retain];
+//        nullObject = [[NSNull null] retain];
+            nullObject = NULL;
         }
     return(self);
     }
 
 - (void)dealloc
     {
-    [nullObject release];
+//    [nullObject release];
     nullObject = NULL;
     //
     [super dealloc];
